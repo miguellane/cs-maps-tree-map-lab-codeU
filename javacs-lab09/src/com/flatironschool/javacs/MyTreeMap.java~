@@ -167,14 +167,12 @@ public class MyTreeMap<K, V> implements Map<K, V> {
 		}else if(cmp < 0){	
 			if(node.left == null){
 				node.left = new Node(key, value);
-				size++;
 			}else{
 				result = putHelper(node.left, key, value);
 			}
 		}else if(cmp > 0){	
 			if(node.right == null){
 				node.right = new Node(key, value);
-				size++;
 			}else{
 				result = putHelper(node.right, key, value);
 			}
